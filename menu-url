@@ -40,6 +40,8 @@ import {
   NegativeImpact, 
   Climaton, 
   EcologicalNicheModeling,
+  Citotoxicity,
+  Roadmap,
 } from "./contents";
 
 interface Base {
