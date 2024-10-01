@@ -1,0 +1,400 @@
+import {
+  Attributions,
+  Contribution,
+  Description,
+  Engineering,
+  Experiments,
+  Home,
+  HumanPractices,
+  Notebook,
+  Results,
+  Safety,
+  Team,
+  Education,
+  Entrepreneurship,
+  Hardware,
+  Measurement,
+  Model,
+  Plant,
+  Software,
+  Sustainable,
+  MissionAndVision,
+  Overview, 
+  GenomeAnnotation, 
+  DifferentialExpressionAnalysis, 
+  Docking, 
+  AlternativeEnzymesSelection, 
+  DockingAndMDS, 
+  Design, 
+  Phytotoxicity, 
+  FieldTests, 
+  FuturePerspectivesAndTroubleshooting, 
+  IntegratedHumanPractices, 
+  Inclusivity, 
+  PhilosophyAndEpistemology, 
+  Reach, 
+  Gallery, 
+  Videogame, 
+  CrowdfundingAndSponsors, 
+  WhyToProtectMaize, 
+  NegativeImpact, 
+  Climaton, 
+  EcologicalNicheModeling,
+} from "./contents";
+
+interface Base {
+  name: string | undefined;
+}
+
+class Folder implements Base {
+  name: string | undefined;
+  folder: Page[] | undefined;
+}
+
+class Page implements Base {
+  name: string | undefined;
+  title: string | undefined;
+  path: string | undefined;
+  component: React.FC | undefined;
+  lead: string | undefined;
+}
+
+const Pages: (Page | Folder)[] = [
+  {
+    name: "Home",
+    title: "Home",
+    path: "/",
+    component: Home,
+    lead: "Welcome to iGEM 2024! Your team has been approved and you are ready to start the iGEM season!",
+  },
+  {
+    name: "About",
+    folder: [
+      {
+        name: "Team",
+        title: "Team",
+        path: "/team",
+        component: Team,
+        lead: "On this page you can introduce your team members, instructors, and advisors.",
+      },
+      {
+        name: "Mission and Vision",
+        title: "Mission and Vision",
+        path: "/mission-and-vision",
+        component: MissionAndVision,
+        lead: "Mission and vision",
+      },
+    ],
+  },
+  {
+    name: "Project",
+    folder: [
+      {
+        name: "Description",
+        title: "Project Description",
+        path: "/description",
+        component: Description,
+        lead: "Describe how and why you chose your iGEM project.",
+      },
+      {
+        name: "Roadmap",
+        title: "Roadmap",
+        path: "/roadmap",
+        component: Roadmap,
+        lead: "Roadmap.",
+      },
+      {
+        name: "Engineering Success",
+        title: "Engineering Success",
+        path: "/engineering",
+        component: Engineering,
+        lead: "Demonstrate engineering success in a technical aspect of your project by going through at least one iteration of the engineering design cycle. This achievement should be distinct from your Contribution for Bronze.",
+      },
+      {
+        name: "Entrepreneurship",
+        title: "Entrepreneurship",
+        path: "/entrepreneurship",
+        component: Entrepreneurship,
+        lead: "The entrepreneurship prize recognizes exceptional effort to build a business case and commercialize an iGEM project.",
+      },
+    ],
+  },
+  {
+    name: "Safety",
+    title: "Safety",
+    path: "/safety",
+    component: Safety,
+    lead: "Describe all the safety issues of your project.",
+  },
+  {
+    name: "Dry Lab",
+    folder: [
+      {
+        name: "Overview",
+        title: "Overview",
+        path: "/overview",
+        component: Overview,
+        lead: "Overview",
+      },
+      {
+        name: "Genome annotation",
+        title: "Genome annotation",
+        path: "/genome-annotation",
+        component: GenomeAnnotation,
+        lead: "Genome annotation.",
+      },
+      {
+        name: "Differential expression analysis",
+        title: "Differential expression analysis",
+        path: "/differential-expression-analysis",
+        component: DifferentialExpressionAnalysis,
+        lead: "Differential expression analysis.",
+      },
+      {
+        name: "Docking",
+        title: "Docking",
+        path: "/docking",
+        component: Docking,
+        lead: "Docking.",
+      },
+      {
+        name: "Alternative enzymes selection",
+        title: "Alternative enzymes selection",
+        path: "/alternative-enzymes-selection",
+        component: AlternativeEnzymesSelection,
+        lead: "Alternative enzymes selection.",
+      },
+      {
+        name: "Docking and MDS",
+        title: "Docking and MDS",
+        path: "/docking-and-mds",
+        component: DockingAndMDS,
+        lead: "Docking and MDS.",
+      },
+      {
+        name: "Model",
+        title: "Model",
+        path: "/model",
+        component: Model,
+        lead: "Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.",
+      },
+    ],
+  },
+  {
+    name: "Wet & Field Lab",
+    folder: [
+      {
+        name: "Contribution",
+        title: "Contribution",
+        path: "/contribution",
+        component: Contribution,
+        lead: "Make a useful contribution for future iGEM teams. Use this page to document that contribution.",
+      },
+      {
+        name: "Design",
+        title: "Design",
+        path: "/design",
+        component: Design,
+        lead: "Design.",
+      },
+      {
+        name: "Citotoxicity",
+        title: "Citotoxicity",
+        path: "/citotoxicity",
+        component: Citotoxicity,
+        lead: "Citotoxicity.",
+      },
+      {
+        name: "Phytotoxicity",
+        title: "Phytotoxicity",
+        path: "/phytotoxicity",
+        component: Phytotoxicity,
+        lead: "Phytotoxicity.",
+      },
+      {
+        name: "Field Tests",
+        title: "Field Tests",
+        path: "/field-tests",
+        component: FieldTests,
+        lead: "Field Tests.",
+      },
+      {
+        name: "Future perspectives and troubleshooting",
+        title: "Future perspectives and troubleshooting",
+        path: "/future-perspectives-and-troubleshooting",
+        component: FuturePerspectivesAndTroubleshooting,
+        lead: "Future perspectives and troubleshooting.",
+      },
+    ],
+  },
+  {
+    name: "Human Practices",
+    folder: [
+      {
+        name: "Human Practices",
+        title: "Human Practices",
+        path: "/human-practices",
+        component: HumanPractices,
+        lead: "We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.",
+      },
+      {
+        name: "Integrated Human Practices",
+        title: "Integrated Human Practices",
+        path: "/integrated-human-practices",
+        component: IntegratedHumanPractices,
+        lead: "Integrated Human Practices.",
+      },
+      {
+        name: "Inclusivity",
+        title: "Inclusivity",
+        path: "/inclusivity",
+        component: Inclusivity,
+        lead: "Inclusivity.",
+      },
+      {
+        name: "Education",
+        title: "Education",
+        path: "/education",
+        component: Education,
+        lead: "Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology.",
+      },
+      {
+        name: "Philosophy and Epistemology",
+        title: "Philosophy and Epistemology",
+        path: "/philosophy-and-Epistemology",
+        component: PhilosophyAndEpistemology,
+        lead: "Philosophy and Epistemology.",
+      },
+      {
+        name: "Reach",
+        title: "Reach",
+        path: "/reach",
+        component: Reach,
+        lead: "Reach.",
+      },
+    ],
+  },
+  {
+    name: "Arts & Design",
+    folder: [
+      {
+        name: "Gallery",
+        title: "Gallery",
+        path: "/gallery",
+        component: Gallery,
+        lead: "Gallery.",
+      },
+      {
+        name: "Videogame",
+        title: "Videogame",
+        path: "/videogame",
+        component: Videogame,
+        lead: "Videogame.",
+      },
+    ],
+  },
+  {
+    name: "Awards",
+    folder: [
+      
+      {
+        name: "Hardware",
+        title: "Hardware",
+        path: "/hardware",
+        component: Hardware,
+        lead: "Hardware in iGEM should make synthetic biology based on standard parts easier, faster, better, or more accessible to our community.",
+      },
+      
+      {
+        name: "Measurement",
+        title: "Measurement",
+        path: "/measurement",
+        component: Measurement,
+        lead: "Synthetic Biology needs great measurement approaches for characterizing parts, and efficient new methods for characterizing many parts at once. Describe your measurement approaches on this page.",
+      },
+      {
+        name: "Plant",
+        title: "Plant",
+        path: "/plant",
+        component: Plant,
+        lead: "This award is designed to celebrate exemplary work done in plant synthetic biology.",
+      },
+      {
+        name: "Software",
+        title: "Software",
+        path: "/software",
+        component: Software,
+        lead: "Software in iGEM should make synthetic biology based on standard parts easier, faster, better or more accessible to our community.",
+      },
+      {
+        name: "Sustainable",
+        title: "Sustainable Development Goals",
+        path: "/sustainable",
+        component: Sustainable,
+        lead: "Describe how you have evaluated your project ideas against one or more of the SDGs.",
+      },
+      
+    ],
+  },
+  {
+    name: "AKNOWLEDGEMENTS",
+    folder: [
+      {
+        name: "Attributions",
+        title: "Attributions",
+        path: "/attributions",
+        component: Attributions,
+        lead: "In the iGEM Competition, we celebrate student effort and achievement. The Attributions form helps the judges differentiate between what students accomplished from how their external collaborators supported them. Therefore, teams must clearly explain on the standard Project Attributions form what work they have conducted by themselves and what has been done by others.",
+      },
+      {
+        name: "Crowdfunding & Sponsors",
+        title: "Crowdfunding & Sponsors",
+        path: "/crowdfunding-&-Sponsors",
+        component:  CrowdfundingAndSponsors,
+        lead: "Crowdfunding & Sponsors.",
+      },
+    ],
+  },
+  {
+    name: "Sustainable development",
+    folder: [
+      {
+        name: "Sustainable",
+        title: "Sustainable Development Goals",
+        path: "/sustainable",
+        component: Sustainable,
+        lead: "Describe how you have evaluated your project ideas against one or more of the SDGs.",
+      },
+      {
+        name: "Why to protect maize?",
+        title: "Why to protect maize?",
+        path: "/Why-to-protect-maize",
+        component: WhyToProtectMaize,
+        lead: "Why to protect maize?.",
+      },
+      {
+        name: "Negative Impact",
+        title: "Negative Impact",
+        path: "/negative-impact",
+        component:  NegativeImpact,
+        lead: "Negative Impact.",
+      },
+      {
+        name: "Climaton",
+        title: "Climaton",
+        path: "/climaton",
+        component:  Climaton,
+        lead: "Climaton.",
+      },
+      {
+        name: "Ecological Niche Modeling",
+        title: "Ecological Niche Modeling",
+        path: "/Ecological Niche Modeling",
+        component:  EcologicalNicheModeling,
+        lead: "Ecological Niche Modeling.",
+      },
+    ],
+  },
+];
+
+export default Pages;
