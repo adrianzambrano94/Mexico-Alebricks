@@ -1,0 +1,120 @@
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+
+const EngineeringSuccess: React.FC = () => {
+  return (
+    <Container className="my-5">
+      {/* Title Section */}
+      <h1 className="h1 my-5" style={{ color: '#ec008c' }}>Engineering success</h1>
+
+      {/* Main Content */}
+      <div>
+        <Row className="justify-content-center">
+          <Col md={10}>
+            <p className="h3">
+              Agropip has been shaped through the rigorous application of the engineering cycle. This process involves identifying problems, designing solutions, testing prototypes, and refining those solutions based on feedback and results. In our project, the engineering cycle has guided every stage of our decision-making, especially when we faced setbacks or when results demanded a rethinking of our approach. Below, we will walk you through how this iterative process manifested in some of the key phases of Agropip’s development.
+            </p>
+          </Col>
+        </Row>
+      </div>
+
+      {/* Section 1: Enzyme Selection */}
+      <h1 className="h1 mt-5 mb-4" style={{ color: '#a50163' }}>1. Enzyme Selection: From 11 to 127 Candidates</h1>
+      <div>
+        <Row className="justify-content-center">
+          <Col md={10}>
+            <p className="h3">
+              One of the most significant moments in Agropip’s development came when Ginkgo Bioworks, our experimental partner, tested our initial enzyme candidates. Initially, we focused on 11 enzymes, believing these were the best suited for our system based on literature and preliminary models. However, the experiments conducted by Ginkgo yielded inconclusive results. Rather than letting this setback stall our progress, we embraced the need for iteration. We realized that our enzyme pool was too narrow and that to increase the likelihood of success, we needed a more diverse selection of enzymes. This led us to conduct a secondary, far more rigorous enzyme selection process. We expanded our focus from 11 enzymes to 127 candidates, increasing our chances of finding the most effective enzymes to drive the metabolic pathway we envisioned. This pivot exemplifies the engineering cycle's principles: identifying failure points, redesigning based on those failures, and moving forward with improved strategies.
+            </p>
+          </Col>
+        </Row>
+      </div>
+
+      {/* Section 2: Mathematical Modeling */}
+      <h1 className="h1 mt-5 mb-4" style={{ color: '#a50163' }}>2. Mathematical Modeling: Optimizing the Yeast System</h1>
+      <div>
+        <Row className="justify-content-center">
+          <Col md={10}>
+            <p className="h3">
+              Simultaneously, we developed a mathematical model to optimize the production system for our biopesticide. Originally, we considered using multiple strains of yeast or even a cell-free system to host the necessary enzymatic reactions. However, through a comprehensive analysis, the model concluded that the most efficient system would involve consolidating the entire pathway into a single, highly optimized yeast strain. This would maximize efficiency by reducing the complexity of the process and ensuring that all enzymes could work in concert within a single biological environment. The engineering cycle played a critical role here as well: our initial assumption was challenged by modeling data, leading us to revise our design. This allowed us to pivot toward a more streamlined and promising approach.
+            </p>
+          </Col>
+        </Row>
+      </div>
+
+      {/* Section 3: Alternative Testing Strategies */}
+      <h1 className="h1 mt-5 mb-4" style={{ color: '#a50163' }}>3. Alternative Testing Strategies: Contingency Plans</h1>
+      <div>
+        <Row className="justify-content-center">
+          <Col md={10}>
+            <p className="h3">
+              As we awaited Ginkgo Bioworks’ delivery of DNA, we recognized the need for contingency strategies. Time constraints were a pressing issue, and we couldn't afford to halt progress. We devised alternative testing strategies, including utilizing Golden Gate Assembly for faster and more accurate cloning and extracting genes from Black Pepper via rtPCR. These strategies would allow us to test our hypotheses in-house should Ginkgo’s timeline not align with ours. Unfortunately, due to time limitations, neither of these alternatives could be tested before our deadlines. However, this phase demonstrated another essential element of the engineering cycle: preparing for potential failures and ensuring that multiple pathways for success are in place. While the tests didn’t proceed as planned, having these alternatives reflected our proactive approach to problem-solving.
+            </p>
+          </Col>
+        </Row>
+      </div>
+
+      {/* Section 4: The Initial Enzyme Pathway */}
+      <h1 className="h1 mt-5 mb-4" style={{ color: '#a50163' }}>4. The Initial Enzyme Pathway and Spontaneous Reactions</h1>
+      <div>
+        <Row className="justify-content-center">
+          <Col md={10}>
+            <p className="h3">
+              A further example of the engineering cycle in action comes from an earlier stage of the project when we were designing the metabolic pathway. Initially, we planned to include the first two enzymes of the pathway, believing they were essential for the production of our target compounds. However, experimental evidence soon showed that yeast naturally produces p-coumaric using its own endogenous enzymes, rendering those first enzymes redundant. Additionally, thanks to a paper published recently this year, we discovered that the ninth reaction in our pathway was not enzyme-driven but instead occurred spontaneously. These revelations forced us to iterate once again, adjusting the design to eliminate unnecessary enzymes and reduce the total number from 11 to 8. This refinement made our design more efficient and could potentially reduce the metabolic burden on the yeast, perfectly demonstrating how the engineering cycle demands continuous reassessment and optimization.
+            </p>
+          </Col>
+        </Row>
+      </div>
+
+      {/* Section 5: Transition from Classical Cloning to Golden Gate Assembly */}
+      <h1 className="h1 mt-5 mb-4" style={{ color: '#a50163' }}>5. Transition from Classical Cloning to Golden Gate Assembly</h1>
+      <div>
+        <Row className="justify-content-center">
+          <Col md={10}>
+            <p className="h3">
+              Initially, our design employed classical cloning techniques, using Type II restriction enzymes to assemble our constructs. While effective, this method proved time-consuming and labor-intensive, particularly when working with multiple genes. In an effort to streamline this process, we transitioned to the more advanced Golden Gate Assembly, which allowed for the simultaneous assembly of multiple DNA fragments in a single reaction. This change significantly reduced the time required for cloning, marking yet another step in the iterative design process. The move to Golden Gate was a direct response to the limitations of our initial approach, and although this technique was not tested in time for our deadlines, it demonstrated how adapting and refining methodologies is central to achieving project goals efficiently. We also focused on designing parts based on the Open Yeast Collection, so we standardized them so everybody could use them in an easy fashion.
+            </p>
+          </Col>
+        </Row>
+      </div>
+
+      {/* Section 6: Integration of Plasmids */}
+      <h1 className="h1 mt-5 mb-4" style={{ color: '#a50163' }}>6. Integration of Plasmids for Stability and Biosafety</h1>
+      <div>
+        <Row className="justify-content-center">
+          <Col md={10}>
+            <p className="h3">
+              Ultimately, our decision to use genome-integrating plasmids rather than autonomous plasmids was a key application of the engineering cycle. While autonomous plasmids initially appeared to be a convenient method for introducing the necessary genes into yeast, we soon recognized the importance of ensuring the long-term stability of these genetic parts within the yeast genome. Genome-integrating plasmids offered a more reliable solution for maintaining genetic stability, preventing plasmid loss or variability over time. Equally important, this approach significantly reduced the potential for horizontal gene transfer, addressing major biosafety concerns. This decision exemplifies the problem-solving nature of the engineering cycle, as we continuously strive for the safest and most efficient solution while carefully balancing technical performance and ethical considerations.
+            </p>
+          </Col>
+        </Row>
+      </div>
+
+      {/* Section 7: Rethinking Our Approach */}
+      <h1 className="h1 mt-5 mb-4" style={{ color: '#a50163' }}>7. Rethinking Our Approach in Light of Expert Feedback</h1>
+      <div>
+        <Row className="justify-content-center">
+          <Col md={10}>
+            <p className="h3">
+              Additionally, feedback from various key stakeholders and experts in climate change played a vital role in reshaping our project’s conceptual framework. Initially, we viewed our solution as a standalone approach, but after considering expert insights, we began to see it as one part of a broader effort to mitigate agricultural challenges, particularly in cases where other sustainable strategies may not succeed. In line with this reconceptualization, we plan to integrate our product with a customized pest management plan tailored to each client’s specific needs, ensuring a more comprehensive and adaptable approach to sustainability.
+            </p>
+          </Col>
+        </Row>
+      </div>
+
+      {/* Conclusion Section */}
+      <h1 className="h1 mt-5 mb-4" style={{ color: '#a50163' }}>Conclusion</h1>
+      <div>
+      <Row className="justify-content-center">
+          <Col md={10}>
+            <p className="h3">
+                The engineering cycle has been at the heart of Agropip’s development. From adjusting our enzyme selection process after inconclusive experimental results to optimizing our yeast production system, we have embraced iterative design at every stage. Our alternative strategies, such as Golden Gate Assembly and rtPCR gene extraction, further demonstrate our commitment to problem-solving, even if they couldn’t be tested in time. Each step of our project has been a testament to the engineering cycle’s power, enabling us to refine our approaches and move closer to our goal of creating a sustainable biopesticide for maize protection. Through this process, we’ve learned that setbacks are not failures but opportunities to learn, redesign, and ultimately improve our solutions.
+            </p>
+          </Col>
+        </Row>
+      </div>
+      </Container>
+  );
+};
+
+export default EngineeringSuccess;
